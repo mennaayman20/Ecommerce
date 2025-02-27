@@ -1,0 +1,40 @@
+
+<div class="flex bg-gray-200 hover:bg-gray-300  transition duration-1000 shadow-2xl w-3/4 m-auto p-4 items-center gap-6 hover:scale-105  ">
+    
+    <div class="w-1/3">
+        <img [src]="productDetails.imageCover" alt="" class="w-full h-auto rounded-lg ">
+    </div>
+
+    <div class="w-2/3 p-4">
+        <h2 class="text-lg font-bold text-gray-700">{{ productDetails.title }}</h2> <br>
+        <p class="text-gray-700 ">{{ productDetails.description }}</p> <br>
+
+        <p class="text-green-700 ">{{ productDetails.category.name }}</p> <br>
+        <p class="text-gray-700 ">{{ productDetails.price|currency:'EGP'   }}</p> <br>
+
+        <button (click)="addToCart(productDetails._id)"
+        class="bg-green-700 px-6 py-2 rounded border transition duration-300 text-white my-1 block w-[95%] mx-auto hover:bg-green-900"
+      >
+        Add to cart
+      </button>
+    </div>
+</div>
+
+
+
+
+
+<!-- <div class="d-flex bg-red-100 w-3/4 m-auto ">
+
+    <div class="w-1/3">
+        <img [src]="productDetails.imageCover" alt="">
+    </div>
+
+    <div class="  ">
+<h2> {{productDetails.title}}</h2>
+<p>{{productDetails.description}}</p>
+    </div>
+
+
+
+</div> -->

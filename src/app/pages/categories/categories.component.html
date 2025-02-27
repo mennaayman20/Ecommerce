@@ -1,0 +1,20 @@
+<section class=" bg-gray-50 p-20  rounded-3xl">
+    <h2 class="text-green-700 text-3xl font-bold  mb-10 text-center font-serif">
+        All Categories
+      </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
+      @for (cat of allCategories; track cat._id) {
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105">
+          <img [src]="cat.image" class="w-full h-[300px] object-cover" alt="{{ cat.name }}">
+          <div class="p-4">
+            <h3 class="text-green-700 text-lg font-semibold mb-2">
+              {{ cat.name }}
+            </h3>
+           
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+  
+  

@@ -1,0 +1,23 @@
+<section class="m-20">
+    <h2 class="text-green-700 text-4xl font-extrabold mb-10 text-center">
+        <i class="fa-solid fa-magnifying-glass" style="color: #78b74e;"></i> Explore Our Brands..
+    </h2>
+  
+    
+  
+  
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      @for (brand of brands; track brand._id) {
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+          <img [src]="brand.image" class="w-full h-56 object-cover" alt="{{ brand.name }}">
+          <div class="p-5 text-center">
+            <h3 class="text-green-700 text-xl font-semibold mb-3">
+              {{ brand.name }}
+            </h3>
+            
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+  

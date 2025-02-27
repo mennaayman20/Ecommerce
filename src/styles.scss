@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import 'ngx-toastr/toastr';
+
+.btn-style{
+    
+   @apply disabled:bg-gray-700 bg-green-900 text-white px-12 py-2 border rounded hover:bg-green-600 transition-colors duration-500
+}
+body{
+   font-family: 'CustomFont', sans-serif;
+}
+
+.main-section{
+   @apply bg-gray-50 rounded border shadow p-4 
+}

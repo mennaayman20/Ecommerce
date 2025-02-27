@@ -1,0 +1,46 @@
+<section class="m-2 mt-7">
+
+   
+    <h2 class="text-green-700 text-5xl text-center  mb-5" >All Products</h2>
+    
+   
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      @for (prod of Products   ; track prod.id) {
+        <div class=" card border border-green-400/50 rounded-md overflow-hidden shadow relative"
+        
+        >
+        <div >
+            <div class="card-img">
+              <img [src]="prod.imageCover" class="w-full h-[250px] object-contain" alt="" />
+            </div>
+            <div class="card-body px-2 py-4">
+              <h4 class="text-green-500 text-xs" > {{prod.category.name }}  </h4>
+              <h3 class="font-medium" > {{prod.title}}  </h3>
+              <div class="flex justify-between items-center">
+                <span>{{prod.price}} </span>
+                <div class="flex items-center">
+                  <i class="fas fa-star text-yellow-300"></i>
+                  <span class="text-gray-500">{{prod.ratingsAverage}}</span>
+                </div>
+              </div>
+            </div>
+    </div>
+    
+    
+    
+            <button (click)="addToCart(prod._id)"
+            class="bg-green-600 px-6 py-2 rounded border text-white my-1 block w-[95%] mx-auto"
+          >
+            Add to cart
+          </button>
+        
+          </div>
+    
+    }
+    
+      </div>
+    
+    
+    
+    
+    </section>
